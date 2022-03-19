@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <!-- Google font integration -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Advice generator app</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-darkBlue">
+  <main class="h-[100vh] flex flex-row items-center">
+    <div class="advice__container mx-auto">
+      <div class="container w-[540px] sm:w-[350px] bg-darkGrayishBlue p-[42.5px] rounded-[15px]">
+        <div class="advice__card">
+          <h2
+            class="advice__card__num text-[14px] font-[800] text-neonGreen tracking-[0.25em] uppercase text-center font-Manrope mb-[25px] sm:text-[11px] sm:tracking-[0.32em]">
+
+            #117
+          </h2>
+          <h1
+            class="advice__card__title text-[28px] sm:text-[24px] font-[800] text-lightCyan tracking-[0.01em] text-center font-Manrope mb-[25px]">
+          </h1>
+          <div class="advice__card__divider mb-[25px] flex flex-col justify-center">
+            <img src="images/pattern-divider-desktop.svg" alt="divider">
+          </div>
+        </div>
+      </div>
+      <div
+        class="group advice__card__btn bg-neonGreen p-[20px] rounded-[50px] w-[65px] h-[65px] mx-auto mt-[-32.5px] cursor-pointer">
+        <img src="images/icon-dice.svg" class="transition-all group-hover:scale-75" alt="">
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- AXIOS integration -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.js"></script>
+  <script src="/js/script.js"></script>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'Manrope': ['Manrope', 'sans-serif']
+          },
+          colors: {
+            lightCyan: 'hsl(193, 38%, 86%)',
+            neonGreen: 'hsl(150, 100%, 66%)',
+            grayishBlue: 'hsl(217, 19%, 38%)',
+            darkGrayishBlue: 'hsl(217, 19%, 24%)',
+            darkBlue: 'hsl(218, 23%, 16%)',
+          },
+          screens: {
+            '2xl': { 'max': '1535px' },
+            'xl': { 'max': '1279px' },
+            'lg': { 'max': '1023px' },
+            'md': { 'max': '767px' },
+            'sm': { 'max': '639px' },
+          }
+        },
+      }
+    }
+  </script>
+</body>
+
+</html>
